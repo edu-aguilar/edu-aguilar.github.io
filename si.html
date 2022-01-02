@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SI</title>
+
+    <link href="http://fonts.cdnfonts.com/css/chrobot" rel="stylesheet" />
+
+    <style>
+      html,
+      body,
+      main {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: "Chrobot", sans-serif;
+      }
+
+      #confetti-canvas {
+        position: absolute;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas id="confetti-canvas"> </canvas>
+      <h2>En los próximos días los tendrás en casa =)</h2>
+      <!-- src="https://media.giphy.com/media/l0MYJnJQ4EiYLxvQ4/giphy.gif" -->
+      <img
+        src="https://media.giphy.com/media/QBC5foQmcOkdq/giphy.gif"
+        alt="happy gif"
+      />
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"
+      integrity="sha256-p6aQfSnK5puy5yn9xCIyBjJKv5FFMhVoHvJqT7ZGdZU="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var confettiElement = document.getElementById("confetti-canvas");
+      var confettiSettings = { target: confettiElement, max: 200, size: 1.25 };
+      var confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
+    </script>
+  </body>
+</html>
